@@ -1,0 +1,106 @@
+.glownyPojemnik {
+  display: flex;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 20px;
+}
+
+.left {
+  margin-right: 50px;
+}
+
+td,
+th {
+  text-align: center;
+}
+
+th,
+label {
+  color: blue;
+  font-weight: bold;
+}
+
+h3 {
+  text-decoration: underline;
+  color: gray;
+}
+
+td:not(:first-child),
+th:not(:first-child) {
+  min-width: 150px;
+  height: 30px;
+  border: 1px solid black;
+}
+
+th:first-child,
+td:first-child {
+  width: 20px;
+  height: 30px;
+  border: 1px solid black;
+}
+
+.opcja {
+  display: flex;
+}
+
+.opcja label {
+  width: 200px;
+  height: 30px;
+  border: 1px solid black;
+  margin: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.opcja .in {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  margin: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a.usun {
+  text-decoration: none;
+  color: black;
+  border: 1px dashed black;
+}
+
+.btnDelete {
+  border: 1px solid red;
+  border-radius: 10px;
+  color: red;
+  font-weight: bold;
+}
+
+.btnCancel,
+.btnEdit {
+  border: 1px solid blue;
+  border-radius: 10px;
+  color: blue;
+  font-weight: bold;
+}
+
+.btnUpdate {
+  border: 1px solid rgb(255, 105, 255);
+  border-radius: 10px;
+  color: rgb(255, 105, 255);
+  font-weight: bold;
+}
+
+.btnAddToDb {
+  border: 1px solid blue;
+  border-radius: 10px;
+  color: blue;
+  font-weight: bold;
+  margin: 20px;
+}

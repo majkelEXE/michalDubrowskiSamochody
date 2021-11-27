@@ -1,0 +1,32 @@
+<tr>
+  {{#if (czyRowne this._id arg)}}
+    <td class="counter notToMark" data-id="{{this._id}}">{{@index}}</td>
+    <td class="ubezp"><select name="ubezpieczony"><option value="TAK">TAK</option><option value="NIE">NIE</option><option value="BRAK">BRAK</option></select></td>
+    <td class="benz"><select name="benzyna"><option value="TAK">TAK</option><option value="NIE">NIE</option><option value="BRAK">BRAK</option></select></td>
+    <td class="uszk"><select name="uszkodzony"><option value="TAK">TAK</option><option value="NIE">NIE</option><option value="BRAK">BRAK</option></select></td>
+    <td class="nap"><select name="naped"><option value="TAK">TAK</option><option value="NIE">NIE</option><option value="BRAK">BRAK</option></select></td>
+    <td class="notToMark">
+      <button name="idik" value="{{this._id}}" type="submit" formaction="/update" class="btnUpdate">UPDATE</button>  
+      </td>
+    <td class="notToMark">
+      <button name="idik" value="{{this._id}}" type="submit" formaction="/" class="btnCancel">CANCEL</button>  
+    </td>
+  {{else}}
+    <td class="counter notToMark" data-id="{{this._id}}">{{@index}}</td>
+    <td class="ubezp">{{this.ubezpieczony}}</td>
+    <td class="benz">{{this.benzyna}}</td>
+    <td class="uszk">{{this.uszkodzony}}</td>
+    <td class="nap">{{this.naped}}</td>
+    <td class="notToMark">
+      <button name="idik" value="{{this._id}}" type="submit" formaction="/usunElement" onclick="return confirm('czy usunąć?')" class="btnDelete">DELETE</button>  
+      </td>
+    <td class="notToMark">
+      <button name="idik" value="{{this._id}}" type="submit" formaction="/edytujElement" class="btnEdit">EDIT</button>  
+    </td>
+  {{/if}}
+  
+
+
+</tr>
+
+

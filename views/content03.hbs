@@ -1,0 +1,56 @@
+<h1>03: zapis/odczyt danych w bazie NEDB - edit/update</h1>
+<div class="glownyPojemnik">
+    <div class="left">
+        <h3>Dane pojazdu:</h3>
+        <form action="/handleForm" method="GET">
+            <div class="opcja"><label for="">ubezpieczony</label><div class="in"><input type="checkbox" name="ubezpieczony"></div></div>
+            <div class="opcja"><label for="">benzyna</label><div class="in"><input type="checkbox" name="benzyna"></div></div>
+            <div class="opcja"><label for="">uszkodzony</label><div class="in"><input type="checkbox" name="uszkodzony"></div></div>
+            <div class="opcja"><label for="">naped 4x4</label><div class="in"><input type="checkbox" name="naped"></div></div>
+            <input type="submit" value="DODAJ DO BAZY" class="btnAddToDb">
+        </form>
+    </div>
+    <div>
+        {{#if wymiana}}
+            <h3>Wszystkie pojazdy - edycja:</h3>
+        {{else}}
+            <h3>Wszystkie pojazdy:</h3>
+        {{/if}}
+        <form method="GET" id="dane">
+        <table>
+
+                {{#if docsy }}
+
+                <tr>
+                    <th class="counter"></th>
+                    <th>ubezpieczony</th>
+                    <th>benzyna</th>
+                    <th>uszkodzony</th>
+                    <th>naped 4x4</th>
+                    <th></th>
+                    <th></th>
+
+                </tr>
+               
+                {{#each docsy}}
+                {{> rekord03 arg = ../wymiana}}
+                
+                {{/each}}
+                {{else}}
+                <tr>
+                    <th class="counter"></th>
+                    <th>ubezpieczony</th>
+                    <th>benzyna</th>
+                    <th>uszkodzony</th>
+                    <th>naped 4x4</th>
+                </tr>
+                {{/if}}
+            
+
+        </table>
+
+        </form>
+
+        
+    </div>
+</div>
